@@ -1,8 +1,20 @@
 {
   "name": "assign.macro",
   "version": "0.0.1",
+  "description": "A babel-macro to transpile `Object.assign`-style expressions to direct assignments for maximum performance.",
+  "author": {
+    "name": "Vincent Riemer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vincentriemer/assign.macro"
+  },
+  "keywords": [
+    "babel-plugin-macros"
+  ],
   "main": "dist/assign.macro.js",
   "source": "src/assign.macro.js", 
+  "license": "MIT",
   "files": [
     "dist",
     "README.md",
