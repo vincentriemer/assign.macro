@@ -24,7 +24,7 @@
     "build": "microbundle",
     "pretest": "yarn build",
     "test": "jest",
-    "prepublish": "yarn build"
+    "prepare": "yarn build"
   },
   "dependencies": {
     "babel-plugin-macros": "^2.2.2"
