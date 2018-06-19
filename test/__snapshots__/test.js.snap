@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros 1. macros: 1. macros 1`] = `
+"
+import assign from \\"../dist/assign.macro\\";
+
+const test = {};
+
+assign(test, { 
+  babel: \\"macros\\",
+  are: \\"dope\\" 
+});
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const test = {};
+
+test.babel = \\"macros\\";
+test.are = \\"dope\\";
+"
+`;
+
+exports[`macros 2. macros: 2. macros 1`] = `
+"
+import assign from \\"../dist/assign.macro\\";
+
+const test = {};
+const foo = \\"bar\\";
+
+assign(test, { foo });
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const test = {};
+const foo = \\"bar\\";
+
+test.foo = foo;
+"
+`;
+
+exports[`macros 3. macros: 3. macros 1`] = `
+"
+import assign from \\"../dist/assign.macro\\";
+
+const test = {};
+const testProp1 = \\"bar\\";
+
+assign(test, { 
+  testProp1,
+  testProp2: () => {
+    console.log(\\"foo\\");
+  },
+  testProp3: 5,
+  testProp4: [\\"foo\\", \\"bar\\"],
+  testProp5: { foo: \\"bar\\" }
+});
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const test = {};
+const testProp1 = \\"bar\\";
+
+test.testProp1 = testProp1;
+
+test.testProp2 = () => {
+  console.log(\\"foo\\");
+};
+
+test.testProp3 = 5;
+test.testProp4 = [\\"foo\\", \\"bar\\"];
+test.testProp5 = { foo: \\"bar\\" };
+"
+`;
