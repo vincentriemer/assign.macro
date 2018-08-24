@@ -1,0 +1,9 @@
+tasks:
+  install:
+    image: "node:10-alpine"
+    command: ["yarn"]
+    args: ["install"]
+  test:
+    image: "node:10-alpine"
+    command: ["yarn"]
+    args: ["test"]
